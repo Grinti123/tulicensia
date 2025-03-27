@@ -1,0 +1,64 @@
+---
+const navItems = [
+  { href: '/', text: 'Inicio' },
+  { href: '/servicios', text: 'Servicios disponibles' },
+  { href: '/como-funciona', text: 'Cómo funciona?' },
+  { href: '/contactenos', text: 'Contáctenos' },
+  { href: '/registrarse', text: 'Registrarse' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-[#157a3c]">
+  <div class="flex justify-between items-center px-4 py-2 md:py-3 md:px-6 max-w-7xl mx-auto">
+    <div class="flex items-center">
+      <a href="/" class="flex items-center">
+        <img src="/img/Artboard 20 3.png" alt="Logo" class="w-32 md:w-39" />
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-8">
+      {navItems.map(item => (
+        <a href={item.href} class="text-white hover:text-gray-200 text-sm font-medium">{item.text}</a>
+      ))}
+      <a href="/ingresar" class="border border-white text-white hover:bg-white hover:text-[#157a3c] px-5 py-2 rounded-full text-sm font-medium transition-colors">
+        Ingresar
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-toggle" class="md:hidden text-white focus:outline-none p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu (Hidden by default) -->
+  <div id="mobile-menu" class="md:hidden hidden">
+    <nav class="flex flex-col py-4 px-4 bg-[#0e6631] border-t border-[#2a8951]">
+      {navItems.map(item => (
+        <a href={item.href} class="text-white hover:text-gray-200 font-medium py-3 px-2 border-b border-[#2a8951] last:border-none">{item.text}</a>
+      ))}
+      <a href="/ingresar" class="text-white hover:text-gray-200 font-medium py-3 px-2">
+        Ingresar
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (toggleButton && mobileMenu) {
+      toggleButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>

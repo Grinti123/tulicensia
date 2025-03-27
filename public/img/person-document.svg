@@ -1,0 +1,24 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Head -->
+  <circle cx="75" cy="45" r="20" fill="#157a3c"/>
+
+  <!-- Body -->
+  <rect x="60" y="65" width="30" height="40" rx="5" fill="#157a3c"/>
+
+  <!-- Arms -->
+  <rect x="45" y="70" width="15" height="30" rx="5" fill="#157a3c"/>
+  <rect x="90" y="70" width="15" height="30" rx="5" fill="#157a3c"/>
+
+  <!-- Document -->
+  <rect x="55" y="80" width="40" height="50" rx="2" fill="white" stroke="#157a3c" stroke-width="2"/>
+
+  <!-- Document lines -->
+  <line x1="65" y1="95" x2="85" y2="95" stroke="#157a3c" stroke-width="2"/>
+  <line x1="65" y1="105" x2="85" y2="105" stroke="#157a3c" stroke-width="2"/>
+  <line x1="65" y1="115" x2="75" y2="115" stroke="#157a3c" stroke-width="2"/>
+
+  <!-- Face elements -->
+  <circle cx="68" cy="40" r="2" fill="white"/>
+  <circle cx="82" cy="40" r="2" fill="white"/>
+  <path d="M70 50 C 75 55 80 50 80 50" stroke="white" stroke-width="2" fill="none"/>
+</svg>

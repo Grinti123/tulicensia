@@ -1,0 +1,34 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Head -->
+  <circle cx="100" cy="60" r="25" fill="#147A31"/>
+
+  <!-- Glasses -->
+  <rect x="85" y="55" width="12" height="10" rx="2" fill="#147A31" stroke="white" stroke-width="1"/>
+  <rect x="103" y="55" width="12" height="10" rx="2" fill="#147A31" stroke="white" stroke-width="1"/>
+  <line x1="97" y1="60" x2="103" y2="60" stroke="white" stroke-width="1"/>
+
+  <!-- Face elements -->
+  <circle cx="91" cy="60" r="2" fill="white"/>
+  <circle cx="109" cy="60" r="2" fill="white"/>
+  <path d="M95 70 Q100 75 105 70" stroke="white" stroke-width="1.5" fill="none"/>
+
+  <!-- Bow tie -->
+  <path d="M95 90 L105 90 L100 95 L95 90 Z" fill="#147A31" stroke="white" stroke-width="1"/>
+
+  <!-- Body -->
+  <path d="M70 100 C70 90 130 90 130 100 L130 150 C130 160 70 160 70 150 Z" fill="#147A31"/>
+
+  <!-- Arms -->
+  <path d="M70 105 C50 95 50 110 60 125 L70 120 Z" fill="#147A31"/>
+  <path d="M130 105 C150 95 150 120 140 125 L130 120 Z" fill="#147A31"/>
+
+  <!-- Left Hand -->
+  <circle cx="60" cy="125" r="8" fill="#147A31"/>
+
+  <!-- Right Hand -->
+  <circle cx="140" cy="125" r="8" fill="#147A31"/>
+
+  <!-- Legs -->
+  <path d="M85 150 L75 190 C72 195 85 195 88 190 L98 150 Z" fill="#147A31"/>
+  <path d="M115 150 L125 190 C128 195 115 195 112 190 L102 150 Z" fill="#147A31"/>
+</svg>

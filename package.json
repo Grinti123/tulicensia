@@ -1,0 +1,17 @@
+{
+  "name": "tulicensia",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@lottiefiles/lottie-interactivity": "^1.6.2",
+    "@tailwindcss/vite": "^4.0.16",
+    "astro": "^5.5.4",
+    "tailwindcss": "^4.0.16"
+  }
+}

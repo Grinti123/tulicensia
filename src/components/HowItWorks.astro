@@ -1,0 +1,321 @@
+<div class="relative">
+  <lottie-player
+    id="car"
+    src="/json/chicacarrito.json"
+    background="transparent"
+    style="width: full; height: full;"
+  ></lottie-player>
+
+  <!-- Mobile Version -->
+   <div class="bg-[#e9f2e7] bg-full sm:h-[20rem] lg:h-[0px]">
+  <section class="md:hidden bg-[#147A31] px-4 py-8 rounded-3xl mx-4 mb-[-4rem] relative z-10" id="comofunciona">
+    <h2 class="text-white text-[28px] font-bold text-center mb-8">
+      Conoce cómo funciona
+    </h2>
+
+    <!-- Step 1 -->
+    <div class="bg-white rounded-2xl p-6 relative" id="step1">
+      <div class="absolute -top-6 right-4">
+        <dotlottie-player
+          src="/json/person-document.json"
+          background="transparent"
+          speed="1"
+          style="width: 80px; height: 80px;"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+
+      <div class="flex items-center gap-2 mb-3">
+        <span class="bg-[#147A31] text-white text-sm font-bold rounded-full w-6 h-6 flex items-center justify-center">1</span>
+        <h3 class="text-[#147A31] text-xl font-medium">Selecciona el trámite</h3>
+      </div>
+
+      <p class="text-[#606060] text-base">
+        Ingresa tus datos y realiza el pago del trámite seleccionado incluyendo los sellos.
+      </p>
+
+      <div class="flex justify-center mt-4">
+        <div class="flex gap-2">
+          <div class="w-8 h-2 bg-[#147A31] rounded-full"></div>
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 (Hidden by default) -->
+    <div class="hidden bg-white rounded-2xl p-6 relative" id="step2">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="bg-[#147A31] text-white text-sm font-bold rounded-full w-6 h-6 flex items-center justify-center">2</span>
+        <h3 class="text-[#147A31] text-xl font-medium">Completa tu Información</h3>
+      </div>
+
+      <p class="text-[#606060] text-base">
+        Llena la solicitud y sube tus fotos y documentos. Analizaremos tu cuenta para validarla.
+      </p>
+
+      <div class="flex justify-center mt-4">
+        <div class="flex gap-2">
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+          <div class="w-8 h-2 bg-[#147A31] rounded-full"></div>
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 (Hidden by default) -->
+    <div class="hidden bg-white rounded-2xl p-6 relative" id="step3">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="bg-[#147A31] text-white text-sm font-bold rounded-full w-6 h-6 flex items-center justify-center">3</span>
+        <h3 class="text-[#147A31] text-xl font-medium">Revisa el Estado de tu Caso</h3>
+      </div>
+
+      <p class="text-[#606060] text-base">
+        En caso existan multas te ayudamos y hasta te gestionamos un plan de pago.
+      </p>
+
+      <div class="flex justify-center mt-4">
+        <div class="flex gap-2">
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+          <div class="w-8 h-2 bg-[#147A31] rounded-full"></div>
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4 (Hidden by default) -->
+    <div class="hidden bg-white rounded-2xl p-6 relative" id="step4">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="bg-[#147A31] text-white text-sm font-bold rounded-full w-6 h-6 flex items-center justify-center">4</span>
+        <h3 class="text-[#147A31] text-xl font-medium">Recibe tu licencia o Permiso</h3>
+      </div>
+
+      <p class="text-[#606060] text-base">
+        Una vez listo, radicamos tu caso y te hacemos llegar tu licencia o permiso por correo.
+      </p>
+
+      <div class="flex justify-center mt-4">
+        <div class="flex gap-2">
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+          <div class="w-8 h-2 bg-[#147A31] rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- Desktop Version -->
+  <section class="hidden md:block desktop-view relative" id="comofunciona-desktop">
+    <div class="car-container absolute">
+      <!-- <Image
+    id="car1"
+    src="/images/coche2.png"
+    width={100}
+    height={100}
+    alt="logo"
+    class="w-[180px] h-auto absolute carrito-posicion-desktop"
+  /> -->
+
+    </div>
+    <div
+      class="contenedor flex items-center justify-center h-full w-full px-[300px] bg-[#e9f2e7] top-[100px]"
+    >
+      <div
+        class="bg-[#147A31] !-mt-10 text-[32px] text-white font-[700] px-[32px] w-full text-center h-[416px] rounded-[44px] flex items-center justify-center mb-10"
+      >
+        <p data-trans="landing::feature_title">Conoce cómo funciona</p>
+      </div>
+      <div
+        class="absolute card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] top-[28.5rem] left-[25rem] visible z-1"
+      >
+        <div class="flex flex-row gap-2 items-center justify-center mb-4">
+          <h2
+            class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
+            data-trans="landing::feature_first_box__title"
+          >
+            Selecciona el trámite
+          </h2>
+          <img
+            src="img/Group 2229(2).png"
+            alt="logo"
+            class="w-[80px] h-full"
+            width="100"
+            height="100"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p
+          class="text-pretty text-[16px] text-[#606060]"
+          data-trans="landing::feature_first_box__description"
+        >
+          Ingresa tus datos y realiza el pago del trámite seleccionado
+          incluyendo los sellos.
+        </p>
+      </div>
+      <div
+        class="absolute card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] top-[28.5rem] right-[25rem] visible z-1"
+      >
+        <div class="flex flex-row gap-2 items-center justify-center mb-4">
+          <h2
+            class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
+            data-trans="landing::feature_second_box__title"
+          >
+            Completa tu Información
+          </h2>
+          <img
+            src="img/Group 2229(3).png"
+            alt="logo"
+            class="w-[80px] h-full"
+            width="100"
+            height="100"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p
+          class="text-pretty text-[16px] text-[#606060]"
+        >
+          Llena la solicitud y sube tus fotos y documentos. Analizaremos tu
+          cuenta para validarla.
+        </p>
+      </div>
+      <div
+        class="absolute card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] bottom-[33.5rem] left-[25rem] visible"
+      >
+        <div class="flex flex-row gap-2 items-center justify-center mb-4">
+          <h2
+            class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
+            data-trans="landing::feature_third_box__title"
+          >
+            Revisa el Estado de tu Caso
+          </h2>
+          <img
+            src="img/Group 2229.png"
+            alt="logo"
+            class="w-[80px] h-full"
+            width="100"
+            height="100"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p
+          class="text-pretty text-[16px] text-[#606060]"
+          data-trans="landing::feature_third_box__description"
+        >
+          En caso existan multas te ayudamos y hasta te gestionamos un plan de
+          pago.
+        </p>
+      </div>
+      <div
+        class="absolute card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] bottom-[33.5rem] right-[25rem] visible"
+        style="transform: translate3d(0px, -1.24833px, 0px);"
+      >
+        <div class="flex flex-row gap-2 items-center justify-center mb-4">
+          <h2
+            class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
+            data-trans="landing::feature_fourth_box__title"
+          >
+            Recibe tu licencia o Permiso
+          </h2>
+          <img
+            src="img/Group 2229(1).png"
+            alt="logo"
+            class="w-[80px] h-full"
+            width="100"
+            height="100"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p
+          class="text-pretty text-[16px] text-[#606060]"
+          data-trans="landing::feature_fourth_box__description"
+        >
+          Una vez listo, radicamos tu caso y te hacemos llegar tu licencia o
+          permiso por correo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wavy shape -->
+  <div class="relative">
+    <lottie-player
+      class="rotate-180 md:hidden"
+      id="car2"
+      src="/json/chicacarrito.json"
+      background="transparent"
+      style="width: full; height: full; margin-top: -2rem;"
+      autoplay
+    ></lottie-player>
+
+    <lottie-player
+      class="rotate-180 hidden md:block"
+      id="car2-desktop"
+      src="/json/chicacarrito.json"
+      background="transparent"
+      style="width: full; height: full;"
+      autoplay
+    ></lottie-player>
+  </div>
+</div>
+
+<!-- Import the required libraries -->
+<script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script is:inline src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Lottie animation interaction
+    if (window.LottieInteractivity) {
+      LottieInteractivity.create({
+        mode: 'scroll',
+        player: '#car',
+        actions: [
+          {
+            visibility: [0, 1.0],
+            type: 'seek',
+            frames: [0, 50],
+          },
+        ],
+      });
+    }
+
+    // Mobile steps carousel
+    const steps = ['step1', 'step2', 'step3', 'step4'];
+    let currentStep = 0;
+
+    function showStep(index) {
+      steps.forEach((step, i) => {
+        const element = document.getElementById(step);
+        if (element) {
+          if (i === index) {
+            element.classList.remove('hidden');
+          } else {
+            element.classList.add('hidden');
+          }
+        }
+      });
+    }
+
+    // Auto-rotate steps every 3 seconds
+    setInterval(() => {
+      currentStep = (currentStep + 1) % steps.length;
+      showStep(currentStep);
+    }, 3000);
+  });
+</script>
+
+<style>
+  .desktop-view {
+    height: 800px;
+  }
+</style>
