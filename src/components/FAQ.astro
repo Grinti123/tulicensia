@@ -6,137 +6,216 @@
     </div>
 
     <!-- Tab Navigation -->
-    <div class="flex flex-wrap justify-center gap-4 mb-12">
-      <button class="py-3 px-8 rounded-full bg-green-700 text-white font-medium focus:outline-none" id="tab-general">
-        General
-      </button>
-      <button class="py-3 px-8 rounded-full border border-green-700 text-green-700 font-medium hover:bg-green-50 focus:outline-none" id="tab-proceso">
-        Proceso
-      </button>
-      <button class="py-3 px-8 rounded-full border border-green-700 text-green-700 font-medium hover:bg-green-50 focus:outline-none" id="tab-tiempo">
-        Tiempo
-      </button>
-      <button class="py-3 px-8 rounded-full border border-green-700 text-green-700 font-medium hover:bg-green-50 focus:outline-none" id="tab-costos">
-        Costos
-      </button>
+    <div
+      class="w-full mx-auto flex flex-row lg:justify-center items-center lg:gap-[12px] gap-4 max-w-[1200px] overflow-x-scroll no-scrollbar mt-[50px] px-[16px] pb-20"
+    >
+      <button
+        id="tab-general"
+        class="font-medium px-[37.5px] py-[7.7px] m-1 rounded-[38.6px] border-2 bg-[#147A31] text-white shadow-md transition-all duration-300 hover:bg-[#0f5a24] hover:shadow-lg active-tab"
+        >General</button
+      ><button
+        id="tab-proceso"
+        class="font-medium px-[37.5px] py-[7.7px] m-1 rounded-[38.6px] border-2 border-[#147A31] text-[#147A31] bg-white transition-all duration-300 hover:bg-[#147A31] hover:text-white hover:shadow-lg"
+        >Proceso</button
+      ><button
+        id="tab-tiempo"
+        class="font-medium px-[37.5px] py-[7.7px] m-1 rounded-[38.6px] border-2 border-[#147A31] text-[#147A31] bg-white transition-all duration-300 hover:bg-[#147A31] hover:text-white hover:shadow-lg"
+        >Tiempo</button
+      ><button
+        id="tab-costos"
+        class="font-medium px-[37.5px] py-[7.7px] m-1 rounded-[38.6px] border-2 border-[#147A31] text-[#147A31] bg-white transition-all duration-300 hover:bg-[#147A31] hover:text-white hover:shadow-lg"
+        >Costos</button>
     </div>
-
-    <!-- FAQ Accordion -->
-    <div class="mx-auto w-full max-w-[100%]">
-      <div class="space-y-4">
-        <!-- FAQ Item 1 -->
-        <div class="border-b border-gray-200 pb-4">
-          <button class="flex justify-between items-center w-full mX-W-[100%] text-left focus:outline-none group" aria-expanded="false" aria-controls="faq-1">
-            <h3 class="text-lg font-medium text-green-700">¿En cuánto tiempo recibo mi licencia?</h3>
-            <svg class="w-6 h-6 text-green-700 transform group-aria-expanded:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="faq-1" class="mt-2 hidden">
-            <p class="text-gray-600">
-              El tiempo de entrega varía según el tipo de trámite. Para renovaciones simples, el proceso puede tomar entre 7 a 10 días hábiles. Para trámites más complejos que requieren verificación adicional, puede tomar hasta 15 días hábiles.
-            </p>
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <!-- FAQ Accordion -->
+      <div class="mx-auto w-full max-w-[100%]">
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="border-b border-gray-200 pb-4">
+            <button
+              class="flex justify-between items-center w-full mX-W-[100%] text-left focus:outline-none group"
+              aria-expanded="false"
+              aria-controls="faq-1"
+            >
+              <h3 class="text-lg font-medium text-green-700">
+                ¿En cuánto tiempo recibo mi licencia?
+              </h3>
+              <svg
+                class="w-6 h-6 text-green-700 transform group-aria-expanded:rotate-180 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="faq-1" class="mt-2 hidden">
+              <p class="text-gray-600">
+                El tiempo de entrega varía según el tipo de trámite. Para
+                renovaciones simples, el proceso puede tomar entre 7 a 10 días
+                hábiles. Para trámites más complejos que requieren verificación
+                adicional, puede tomar hasta 15 días hábiles.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- FAQ Item 2 -->
-        <div class="border-b border-gray-200 pb-4">
-          <button class="flex justify-between items-center w-full text-left focus:outline-none group" aria-expanded="false" aria-controls="faq-2">
-            <h3 class="text-lg font-medium text-green-700">¿Puedo recibir el examen medico "online"?</h3>
-            <svg class="w-6 h-6 text-green-700 transform group-aria-expanded:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="faq-2" class="mt-2 hidden">
-            <p class="text-gray-600">
-              Sí, ofrecemos exámenes médicos a través de consultas por video con médicos certificados. Este servicio está disponible para ciertos trámites de renovación. Sin embargo, para licencias iniciales o algunos casos especiales, puede ser necesario un examen médico presencial.
-            </p>
+          <!-- FAQ Item 2 -->
+          <div class="border-b border-gray-200 pb-4">
+            <button
+              class="flex justify-between items-center w-full text-left focus:outline-none group"
+              aria-expanded="false"
+              aria-controls="faq-2"
+            >
+              <h3 class="text-lg font-medium text-green-700">
+                ¿Puedo recibir el examen medico "online"?
+              </h3>
+              <svg
+                class="w-6 h-6 text-green-700 transform group-aria-expanded:rotate-180 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="faq-2" class="mt-2 hidden">
+              <p class="text-gray-600">
+                Sí, ofrecemos exámenes médicos a través de consultas por video
+                con médicos certificados. Este servicio está disponible para
+                ciertos trámites de renovación. Sin embargo, para licencias
+                iniciales o algunos casos especiales, puede ser necesario un
+                examen médico presencial.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- FAQ Item 3 -->
-        <div class="border-b border-gray-200 pb-4">
-          <button class="flex justify-between items-center w-full text-left focus:outline-none group" aria-expanded="false" aria-controls="faq-3">
-            <h3 class="text-lg font-medium text-green-700">¿Cuáles son los costos de los trámites?</h3>
-            <svg class="w-6 h-6 text-green-700 transform group-aria-expanded:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="faq-3" class="mt-2 hidden">
-            <p class="text-gray-600">
-              Los costos varían según el tipo de trámite. Nuestras tarifas incluyen todos los sellos y aranceles gubernamentales, más nuestra comisión por gestión. En tu cuenta podrás ver un desglose detallado de todos los costos asociados a tu trámite específico.
-            </p>
+          <!-- FAQ Item 3 -->
+          <div class="border-b border-gray-200 pb-4">
+            <button
+              class="flex justify-between items-center w-full text-left focus:outline-none group"
+              aria-expanded="false"
+              aria-controls="faq-3"
+            >
+              <h3 class="text-lg font-medium text-green-700">
+                ¿Cuáles son los costos de los trámites?
+              </h3>
+              <svg
+                class="w-6 h-6 text-green-700 transform group-aria-expanded:rotate-180 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="faq-3" class="mt-2 hidden">
+              <p class="text-gray-600">
+                Los costos varían según el tipo de trámite. Nuestras tarifas
+                incluyen todos los sellos y aranceles gubernamentales, más
+                nuestra comisión por gestión. En tu cuenta podrás ver un
+                desglose detallado de todos los costos asociados a tu trámite
+                específico.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- FAQ Item 4 -->
-        <div class="border-b border-gray-200 pb-4">
-          <button class="flex justify-between items-center w-full text-left focus:outline-none group" aria-expanded="false" aria-controls="faq-4">
-            <h3 class="text-lg font-medium text-green-700">¿Puedo recibir ayuda de un representante?</h3>
-            <svg class="w-6 h-6 text-green-700 transform group-aria-expanded:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="faq-4" class="mt-2 hidden">
-            <p class="text-gray-600">
-              Absolutamente. Contamos con representantes disponibles por teléfono, chat y WhatsApp para asistirte en cada paso del proceso. Puedes comunicarte con nuestro equipo en horario laboral o programar una cita virtual para recibir atención personalizada.
-            </p>
+          <!-- FAQ Item 4 -->
+          <div class="border-b border-gray-200 pb-4">
+            <button
+              class="flex justify-between items-center w-full text-left focus:outline-none group"
+              aria-expanded="false"
+              aria-controls="faq-4"
+            >
+              <h3 class="text-lg font-medium text-green-700">
+                ¿Puedo recibir ayuda de un representante?
+              </h3>
+              <svg
+                class="w-6 h-6 text-green-700 transform group-aria-expanded:rotate-180 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="faq-4" class="mt-2 hidden">
+              <p class="text-gray-600">
+                Absolutamente. Contamos con representantes disponibles por
+                teléfono, chat y WhatsApp para asistirte en cada paso del
+                proceso. Puedes comunicarte con nuestro equipo en horario
+                laboral o programar una cita virtual para recibir atención
+                personalizada.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<script>
-  // Accordion functionality
-  document.addEventListener('DOMContentLoaded', () => {
-    const accordionButtons = document.querySelectorAll('button[aria-controls^="faq-"]');
+  <script>
+    // Accordion functionality
+    document.addEventListener("DOMContentLoaded", () => {
+      const accordionButtons = document.querySelectorAll(
+        'button[aria-controls^="faq-"]',
+      );
 
-    accordionButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const isExpanded = button.getAttribute('aria-expanded') === 'true';
-        const contentId = button.getAttribute('aria-controls');
-        if (!contentId) return;
+      accordionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const isExpanded = button.getAttribute("aria-expanded") === "true";
+          const contentId = button.getAttribute("aria-controls");
+          if (!contentId) return;
 
-        const content = document.getElementById(contentId);
-        if (!content) return;
+          const content = document.getElementById(contentId);
+          if (!content) return;
 
-        // Toggle current accordion
-        button.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+          // Toggle current accordion
+          button.setAttribute("aria-expanded", isExpanded ? "false" : "true");
 
-        // Toggle visibility
-        if (isExpanded) {
-          content.classList.add('hidden');
-        } else {
-          content.classList.remove('hidden');
-        }
-      });
-    });
-
-    // Tab functionality
-    const tabButtons = [
-      document.getElementById('tab-general'),
-      document.getElementById('tab-proceso'),
-      document.getElementById('tab-tiempo'),
-      document.getElementById('tab-costos')
-    ].filter((tab): tab is HTMLElement => tab !== null);
-
-    tabButtons.forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Reset all tabs
-        tabButtons.forEach(t => {
-          t.classList.remove('bg-green-700', 'text-white');
-          t.classList.add('border', 'border-green-700', 'text-green-700');
+          // Toggle visibility
+          if (isExpanded) {
+            content.classList.add("hidden");
+          } else {
+            content.classList.remove("hidden");
+          }
         });
+      });
 
-        // Highlight active tab
-        tab.classList.remove('border', 'border-green-700', 'text-green-700');
-        tab.classList.add('bg-green-700', 'text-white');
+      // Tab functionality
+      const tabButtons = document.querySelectorAll('[id^="tab-"]');
 
-        // Here you would add logic to show content relevant to the selected tab
-        // For example, filtering different sets of FAQs
+      tabButtons.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // Remove active state from all tabs
+          tabButtons.forEach((t) => {
+            t.classList.remove("bg-[#147A31]", "text-white", "active-tab");
+            t.classList.add("border-[#147A31]", "text-[#147A31]", "bg-white");
+          });
+
+          // Add active state to clicked tab
+          tab.classList.remove("border-[#147A31]", "text-[#147A31]", "bg-white");
+          tab.classList.add("bg-[#147A31]", "text-white", "active-tab");
+
+          // Here you would add logic to show content relevant to the selected tab
+          // For example, filtering different sets of FAQs
+        });
       });
     });
-  });
-</script>
+  </script>
+</section>
