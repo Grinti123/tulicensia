@@ -1,24 +1,26 @@
-<section class="py-16 px-6">
-  <div class="max-w-[1207px] mx-auto bg-[#147A31] rounded-[43px] overflow-hidden shadow-md">
-    <div class="flex flex-col md:flex-row items-center justify-between p-8">
-      <div class="text-white mb-8 md:mb-0 md:w-1/2">
+<section class="py-16 px-4 md:px-8 lg:px-12">
+  <div class="w-full max-w-[100%] mx-auto bg-[#147A31] rounded-[30px] overflow-hidden shadow-md">
+    <div class="flex flex-col md:flex-row items-center justify-between p-6 md:p-12">
+      <div class="text-white mb-8 md:mb-0 md:w-1/2 md:pr-6 text-center md:text-left">
         <h2 class="text-3xl font-bold mb-4">Una nueva manera de realizar tus trámites</h2>
-        <div class="w-[104px] h-[2px] bg-white mb-6"></div>
+        <div class="w-[104px] h-[2px] bg-white mb-6 mx-auto md:mx-0"></div>
         <p class="mb-6">
           Utiliza las ventajas de la comunicación y procesos digitales con el apoyo
           inmediato y constante de nuestros especialistas, disponibles por teléfono,
           chat y WhatsApp a tu conveniencia.
         </p>
-        <a href="#" class="inline-block bg-white text-green-600 py-3 px-6 rounded-[25px] font-medium hover:bg-gray-100 transition-colors">
+        <a href="#" class="inline-block bg-white text-[#147A31] py-3 px-6 rounded-[25px] font-medium hover:bg-gray-100 transition-colors">
           Comienza ahora
         </a>
       </div>
-      <div class="md:w-1/2 flex justify-center">
+      <div class="md:w-1/2 flex justify-center relative" id="contact-lottie-container">
         <dotlottie-player
+        id="contact-lottie"
         src="json/chicolaptop.json"
         background="transparent"
         speed="1"
         style="width: 45vw; height: 45vh"
+        class="transition-transform duration-700"
         loop
         autoplay
       ></dotlottie-player>
@@ -26,3 +28,38 @@
     </div>
   </div>
 </section>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Contact section lottie scroll-based movement
+    const handleContactAnimation = () => {
+      const container = document.getElementById('contact-lottie-container');
+      const lottie = document.getElementById('contact-lottie');
+
+      if (!container || !lottie) return;
+
+      const containerRect = container.getBoundingClientRect();
+      const containerTop = containerRect.top;
+      const containerHeight = container.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      // Calculate how much of the section is visible in the viewport
+      const visibleRatio = Math.max(0, Math.min(1,
+        (windowHeight - containerTop) / Math.min(windowHeight, containerHeight)
+      ));
+
+      // Map visibleRatio (0-1) to a position value (30px to -30px)
+      // This gives us a total range of 60px of movement (more subtle)
+      const positionY = 30 - (visibleRatio * 60);
+
+      // Apply position to lottie
+      lottie.style.transform = `translateY(${positionY}px)`;
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleContactAnimation);
+
+    // Initial call to set correct position
+    handleContactAnimation();
+  });
+</script>

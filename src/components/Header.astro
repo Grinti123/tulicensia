@@ -8,11 +8,11 @@ const navItems = [
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-[#157a3c]">
+<header id="main-header" class="fixed top-0 left-0 right-0 w-full z-50 bg-[#157a3c] transition-all duration-300">
   <div class="flex justify-between items-center px-4 py-2 md:py-3 md:px-6 max-w-7xl mx-auto">
     <div class="flex items-center">
       <a href="/" class="flex items-center">
-        <img src="/img/Artboard 20 3.png" alt="Logo" class="w-32 md:w-39" />
+        <img src="/img/Artboard 23 1.png" alt="Logo" class="w-32 md:w-39" />
       </a>
     </div>
 
@@ -49,16 +49,43 @@ const navItems = [
   </div>
 </header>
 
+<!-- Spacer to prevent content from hiding behind fixed header -->
+<div class="h-[60px] md:h-[72px]"></div>
+
 <script>
-  // Mobile menu toggle
   document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu toggle
     const toggleButton = document.getElementById('mobile-menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const header = document.getElementById('main-header');
 
     if (toggleButton && mobileMenu) {
       toggleButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
       });
     }
+
+    // Add shadow on scroll
+    window.addEventListener('scroll', () => {
+      if (header) {
+        if (window.scrollY > 10) {
+          header.classList.add('shadow-md', 'bg-opacity-95');
+        } else {
+          header.classList.remove('shadow-md', 'bg-opacity-95');
+        }
+      }
+    });
+
+    // Initial check for scroll position (in case page is loaded scrolled down)
+    if (header && window.scrollY > 10) {
+      header.classList.add('shadow-md', 'bg-opacity-95');
+    }
   });
 </script>
+
+<style>
+  /* Ensure smooth transition for header shadow */
+  #main-header {
+    backdrop-filter: blur(5px);
+  }
+</style>

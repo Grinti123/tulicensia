@@ -1,126 +1,139 @@
 <div class="relative">
   <lottie-player
-    id="car"
+  id="car"
     src="/json/chicacarrito.json"
     background="transparent"
-    style="width: full; height: full;"
-  ></lottie-player>
+    style="width: full; height: full; margin-top: -100px;"
+    ></lottie-player>
 
   <!-- Mobile Version -->
-   <div class="bg-[#e9f2e7] bg-full sm:h-[20rem] lg:h-[0px]">
+   <div class="bg-[#E9F2E7] h-[40rem] lg:h-[0px]">
+    <div class="flex justify-center items-center -mt-10">
+    <lottie-player
+  id="car"
+    src="/json/chicopapelito.json"
+    background="transparent"
+    style="width: 200px; height: 200px; margin-bottom: -20px;"
+    loop
+    autoplay
+    ></lottie-player>
+    </div>
   <section class="md:hidden bg-[#147A31] px-4 py-8 rounded-3xl mx-4 mb-[-4rem] relative z-10" id="comofunciona">
     <h2 class="text-white text-[28px] font-bold text-center mb-8">
       Conoce cómo funciona
     </h2>
 
-    <!-- Step 1 -->
-    <div class="bg-white rounded-2xl p-6 relative" id="step1">
-      <div class="absolute -top-6 right-4">
-        <dotlottie-player
-          src="/json/person-document.json"
-          background="transparent"
-          speed="1"
-          style="width: 80px; height: 80px;"
-          loop
-          autoplay
-        ></dotlottie-player>
-      </div>
+    <!-- Swiper container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Step 1 -->
+        <div class="swiper-slide">
+          <div class="bg-white shadow-lg px-[24px] pb-[48px] pt-[32px] rounded-[20px] w-[700px] h-[217px] flex flex-col" id="step1">
+            <div class="flex flex-row gap-2 items-center justify-center mb-4">
+              <h3 class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]">
+                Selecciona el trámite
+              </h3>
+              <img
+                src="img/Group 2229.png"
+                alt="logo"
+                class="w-[80px] h-full"
+                width="100"
+                height="100"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <p class="text-pretty text-[16px] text-[#606060]">
+              Ingresa tus datos y realiza el pago del trámite seleccionado incluyendo los sellos.
+            </p>
+          </div>
+        </div>
 
-      <div class="flex items-center gap-2 mb-3">
-        <span class="bg-[#147A31] text-white text-sm font-bold rounded-full w-6 h-6 flex items-center justify-center">1</span>
-        <h3 class="text-[#147A31] text-xl font-medium">Selecciona el trámite</h3>
-      </div>
+        <!-- Step 2 -->
+        <div class="swiper-slide">
+          <div class="bg-white shadow-lg px-[24px] pb-[48px] pt-[32px] rounded-[20px] w-[700px] h-[217px] flex flex-col" id="step2">
+            <div class="flex flex-row gap-2 items-center justify-center mb-4">
+              <h3 class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]">
+                Completa tu Información
+              </h3>
+              <img
+                src="img/Group 2229(1).png"
+                alt="logo"
+                class="w-[80px] h-full"
+                width="100"
+                height="100"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <p class="text-pretty text-[16px] text-[#606060]">
+              Llena la solicitud y sube tus fotos y documentos. Analizaremos tu cuenta para validarla.
+            </p>
+          </div>
+        </div>
 
-      <p class="text-[#606060] text-base">
-        Ingresa tus datos y realiza el pago del trámite seleccionado incluyendo los sellos.
-      </p>
+        <!-- Step 3 -->
+        <div class="swiper-slide">
+          <div class="bg-white shadow-lg px-[24px] pb-[48px] pt-[32px] rounded-[20px] w-[700px] h-[217px] flex flex-col" id="step3">
+            <div class="flex flex-row gap-2 items-center justify-center mb-4">
+              <h3 class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]">
+                Revisa el Estado de tu Caso
+              </h3>
+              <img
+                src="img/Group 2229(2).png"
+                alt="logo"
+                class="w-[80px] h-full"
+                width="100"
+                height="100"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <p class="text-pretty text-[16px] text-[#606060]">
+              En caso existan multas te ayudamos y hasta te gestionamos un plan de pago.
+            </p>
+          </div>
+        </div>
 
-      <div class="flex justify-center mt-4">
-        <div class="flex gap-2">
-          <div class="w-8 h-2 bg-[#147A31] rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+        <!-- Step 4 -->
+        <div class="swiper-slide">
+          <div class="bg-white shadow-lg px-[24px] pb-[48px] pt-[32px] rounded-[20px] w-[700px] h-[217px] flex flex-col" id="step4">
+            <div class="flex flex-row gap-2 items-center justify-center mb-4">
+              <h3 class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]">
+                Recibe tu licencia o Permiso
+              </h3>
+              <img
+                src="img/Group 2229(3).png"
+                alt="logo"
+                class="w-[80px] h-full"
+                width="100"
+                height="100"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <p class="text-pretty text-[16px] text-[#606060]">
+              Una vez listo, radicamos tu caso y te hacemos llegar tu licencia o permiso por correo.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Step 2 (Hidden by default) -->
-    <div class="hidden bg-white rounded-2xl p-6 relative" id="step2">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="bg-[#147A31] text-white text-sm font-bold rounded-full w-6 h-6 flex items-center justify-center">2</span>
-        <h3 class="text-[#147A31] text-xl font-medium">Completa tu Información</h3>
-      </div>
-
-      <p class="text-[#606060] text-base">
-        Llena la solicitud y sube tus fotos y documentos. Analizaremos tu cuenta para validarla.
-      </p>
-
-      <div class="flex justify-center mt-4">
-        <div class="flex gap-2">
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div class="w-8 h-2 bg-[#147A31] rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Step 3 (Hidden by default) -->
-    <div class="hidden bg-white rounded-2xl p-6 relative" id="step3">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="bg-[#147A31] text-white text-sm font-bold rounded-full w-6 h-6 flex items-center justify-center">3</span>
-        <h3 class="text-[#147A31] text-xl font-medium">Revisa el Estado de tu Caso</h3>
-      </div>
-
-      <p class="text-[#606060] text-base">
-        En caso existan multas te ayudamos y hasta te gestionamos un plan de pago.
-      </p>
-
-      <div class="flex justify-center mt-4">
-        <div class="flex gap-2">
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div class="w-8 h-2 bg-[#147A31] rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Step 4 (Hidden by default) -->
-    <div class="hidden bg-white rounded-2xl p-6 relative" id="step4">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="bg-[#147A31] text-white text-sm font-bold rounded-full w-6 h-6 flex items-center justify-center">4</span>
-        <h3 class="text-[#147A31] text-xl font-medium">Recibe tu licencia o Permiso</h3>
-      </div>
-
-      <p class="text-[#606060] text-base">
-        Una vez listo, radicamos tu caso y te hacemos llegar tu licencia o permiso por correo.
-      </p>
-
-      <div class="flex justify-center mt-4">
-        <div class="flex gap-2">
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div class="w-8 h-2 bg-[#147A31] rounded-full"></div>
-        </div>
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
-  </div>
+</div>
 
   <!-- Desktop Version -->
   <section class="hidden md:block desktop-view relative" id="comofunciona-desktop">
     <div class="car-container absolute">
       <!-- <Image
-    id="car1"
-    src="/images/coche2.png"
-    width={100}
-    height={100}
-    alt="logo"
-    class="w-[180px] h-auto absolute carrito-posicion-desktop"
-  /> -->
+  id="car1"
+  src="/images/coche2.png"
+  width={100}
+  height={100}
+  alt="logo"
+  class="w-[180px] h-auto absolute carrito-posicion-desktop"
+/> -->
 
     </div>
     <div
@@ -132,14 +145,15 @@
         <p data-trans="landing::feature_title">Conoce cómo funciona</p>
       </div>
       <div
-        class="absolute card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] top-[28.5rem] left-[25rem] visible z-1"
+        id="step1-desktop"
+        class="absolute card step-card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] top-[28.5rem] left-[25rem] visible z-1 transition-transform duration-700 translate-y-[30px]"
       >
         <div class="flex flex-row gap-2 items-center justify-center mb-4">
           <h2
             class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
             data-trans="landing::feature_first_box__title"
           >
-            Selecciona el trámite
+          Revisa el estado de tu caso
           </h2>
           <img
             src="img/Group 2229(2).png"
@@ -155,19 +169,19 @@
           class="text-pretty text-[16px] text-[#606060]"
           data-trans="landing::feature_first_box__description"
         >
-          Ingresa tus datos y realiza el pago del trámite seleccionado
-          incluyendo los sellos.
+        En caso existan multas te ayudamos y hasta te gestionamos un plan de pago.
         </p>
       </div>
       <div
-        class="absolute card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] top-[28.5rem] right-[25rem] visible z-1"
+        id="step2-desktop"
+        class="absolute card step-card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] top-[28.5rem] right-[25rem] visible z-1 transition-transform duration-700 translate-y-[30px]"
       >
         <div class="flex flex-row gap-2 items-center justify-center mb-4">
           <h2
             class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
             data-trans="landing::feature_second_box__title"
           >
-            Completa tu Información
+          Recibe tu licencia o Permiso
           </h2>
           <img
             src="img/Group 2229(3).png"
@@ -182,19 +196,19 @@
         <p
           class="text-pretty text-[16px] text-[#606060]"
         >
-          Llena la solicitud y sube tus fotos y documentos. Analizaremos tu
-          cuenta para validarla.
+        Una vez listo, radicamos tu caso y te hacemos llegar tu licencia o permiso por correo.
         </p>
       </div>
       <div
-        class="absolute card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] bottom-[33.5rem] left-[25rem] visible"
+        id="step3-desktop"
+        class="absolute card step-card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] bottom-[33.5rem] left-[25rem] visible transition-transform duration-700 translate-y-[30px]"
       >
         <div class="flex flex-row gap-2 items-center justify-center mb-4">
           <h2
             class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
             data-trans="landing::feature_third_box__title"
           >
-            Revisa el Estado de tu Caso
+          Selecciona el trámite
           </h2>
           <img
             src="img/Group 2229.png"
@@ -210,20 +224,20 @@
           class="text-pretty text-[16px] text-[#606060]"
           data-trans="landing::feature_third_box__description"
         >
-          En caso existan multas te ayudamos y hasta te gestionamos un plan de
-          pago.
+        Ingresa tus datos y realiza el pago del trámite seleccionado
+        incluyendo los sellos.
         </p>
       </div>
       <div
-        class="absolute card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] bottom-[33.5rem] right-[25rem] visible"
-        style="transform: translate3d(0px, -1.24833px, 0px);"
+        id="step4-desktop"
+        class="absolute card step-card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] bottom-[33.5rem] right-[25rem] visible transition-transform duration-700 translate-y-[30px]"
       >
         <div class="flex flex-row gap-2 items-center justify-center mb-4">
           <h2
             class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
             data-trans="landing::feature_fourth_box__title"
           >
-            Recibe tu licencia o Permiso
+          Completa tu Información
           </h2>
           <img
             src="img/Group 2229(1).png"
@@ -239,8 +253,7 @@
           class="text-pretty text-[16px] text-[#606060]"
           data-trans="landing::feature_fourth_box__description"
         >
-          Una vez listo, radicamos tu caso y te hacemos llegar tu licencia o
-          permiso por correo.
+        Llena la solicitud y sube tus fotos y documentos. Analizaremos tu cuenta para validarla.
         </p>
       </div>
     </div>
@@ -248,9 +261,9 @@
 
   <!-- Wavy shape -->
   <div class="relative">
-    <lottie-player
+  <lottie-player
       class="rotate-180 md:hidden"
-      id="car2"
+  id="car2"
       src="/json/chicacarrito.json"
       background="transparent"
       style="width: full; height: full; margin-top: -2rem;"
@@ -260,21 +273,42 @@
     <lottie-player
       class="rotate-180 hidden md:block"
       id="car2-desktop"
-      src="/json/chicacarrito.json"
-      background="transparent"
-      style="width: full; height: full;"
-      autoplay
+    src="/json/chicacarrito.json"
+    background="transparent"
+    style="width: full; height: full; margin-top: -200px;"
+    autoplay
     ></lottie-player>
-  </div>
+</div>
 </div>
 
 <!-- Import the required libraries -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script is:inline src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
 <script is:inline>
   document.addEventListener("DOMContentLoaded", function() {
-    // Lottie animation interaction
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
+      },
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+        bulletElement: 'div',
+      },
+    });
+
+    // Lottie animation
     if (window.LottieInteractivity) {
       LottieInteractivity.create({
         mode: 'scroll',
@@ -289,33 +323,71 @@
       });
     }
 
-    // Mobile steps carousel
-    const steps = ['step1', 'step2', 'step3', 'step4'];
-    let currentStep = 0;
+    // Desktop steps scroll-based movement
+    let lastScrollTop = 0; // Store the last scroll position
 
-    function showStep(index) {
-      steps.forEach((step, i) => {
-        const element = document.getElementById(step);
-        if (element) {
-          if (i === index) {
-            element.classList.remove('hidden');
-          } else {
-            element.classList.add('hidden');
-          }
-        }
-      });
-    }
+    const handleStepsAnimation = () => {
+      const section = document.getElementById('comofunciona-desktop');
+      if (!section) return;
 
-    // Auto-rotate steps every 3 seconds
-    setInterval(() => {
-      currentStep = (currentStep + 1) % steps.length;
-      showStep(currentStep);
-    }, 3000);
+      const sectionRect = section.getBoundingClientRect();
+      const sectionTop = sectionRect.top;
+      const sectionHeight = section.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      // Calculate how much of the section is visible in the viewport
+      const visibleRatio = Math.max(0, Math.min(1,
+        (windowHeight - sectionTop) / Math.min(windowHeight, sectionHeight)
+      ));
+
+      // Map visibleRatio (0-1) to a position value (30px to -30px)
+      // This gives us a total range of 60px of movement (more subtle)
+      const positionY = 30 - (visibleRatio * 60);
+
+      // Get steps
+      const step1 = document.getElementById('step1-desktop');
+      const step2 = document.getElementById('step2-desktop');
+      const step3 = document.getElementById('step3-desktop');
+      const step4 = document.getElementById('step4-desktop');
+
+      // Apply position to all steps
+      if (step1) step1.style.transform = `translateY(${positionY}px)`;
+      if (step2) step2.style.transform = `translateY(${positionY}px)`;
+      if (step3) step3.style.transform = `translateY(${positionY}px)`;
+      if (step4) step4.style.transform = `translateY(${positionY}px)`;
+
+      // Update last scroll position
+      lastScrollTop = window.scrollY;
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleStepsAnimation);
+
+    // Initial call to set correct positions
+    handleStepsAnimation();
   });
 </script>
 
 <style>
   .desktop-view {
     height: 800px;
+  }
+
+  /* Swiper styles */
+  .swiper {
+    width: 100%;
+    padding-bottom: 0;
+    position: relative;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-slide-next {
+    opacity: 0;
+    visibility: hidden;
   }
 </style>
