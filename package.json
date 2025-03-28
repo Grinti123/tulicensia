@@ -12,6 +12,7 @@
     "@lottiefiles/lottie-interactivity": "^1.6.2",
     "@tailwindcss/vite": "^4.0.16",
     "astro": "^5.5.4",
+    "node-polyglot": "^2.6.0",
     "tailwindcss": "^4.0.16"
   }
 }
