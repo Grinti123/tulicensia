@@ -313,14 +313,14 @@
 
     // Lottie animation
     if (window.LottieInteractivity) {
-      const anim = LottieInteractivity.create({
-        player: '#car',
+      LottieInteractivity.create({
         mode: 'scroll',
+        player: '#car',
         actions: [
           {
             visibility: [0, 1.0],
             type: 'seek',
-            frames: [10, 10],
+            frames: [0, 50],
           },
         ],
       });
