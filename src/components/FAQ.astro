@@ -1,5 +1,5 @@
 <section class="py-16 bg-white">
-  <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+  <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
     <!-- Section Title -->
     <div class="text-center mb-10">
       <h2 class="text-3xl font-bold text-green-700">Preguntas frecuentes</h2>
@@ -140,15 +140,15 @@
             </div>
           </div>
 
-          <!-- FAQ Item 4 -->
-          <div class="rounded-2xl overflow-hidden transition-all duration-300">
+          <!-- FAQ Item 4 (Hidden by default) -->
+          <div id="proceso-faq" class="rounded-2xl overflow-hidden transition-all duration-300 hidden">
             <button
               class="flex justify-between items-center w-full text-left focus:outline-none group p-4 hover:bg-[#f8f7ff]"
               aria-expanded="false"
               aria-controls="faq-4"
             >
               <h3 class="text-lg font-bold text-[#1a602d]">
-                ¿Puedo recibir ayuda de un representante?
+                ¿Cómo funciona el proceso de renovación?
               </h3>
               <svg
                 class="w-6 h-6 text-[#1a602d] transform transition-transform duration-200"
@@ -167,11 +167,7 @@
             <div id="faq-4" class="hidden">
               <div class="p-4 bg-[#f8f7ff]">
                 <p class="text-gray-600">
-                  Absolutamente. Contamos con representantes disponibles por
-                  teléfono, chat y WhatsApp para asistirte en cada paso del
-                  proceso. Puedes comunicarte con nuestro equipo en horario
-                  laboral o programar una cita virtual para recibir atención
-                  personalizada.
+                  El proceso de renovación es simple: primero completas el formulario en línea, luego realizas el examen médico virtual, y finalmente recibimos la documentación necesaria. Una vez que todo está en orden, procesamos tu solicitud y te enviamos tu nueva licencia por correo.
                 </p>
               </div>
             </div>
@@ -217,6 +213,7 @@
 
       // Tab functionality
       const tabButtons = document.querySelectorAll('[id^="tab-"]');
+      const procesoFaq = document.getElementById('proceso-faq');
 
       tabButtons.forEach((tab) => {
         tab.addEventListener("click", () => {
@@ -229,6 +226,25 @@
           // Add active state to clicked tab
           tab.classList.remove("border-[#147A31]", "text-[#147A31]", "bg-white");
           tab.classList.add("bg-[#147A31]", "text-white", "active-tab");
+
+          // Show/hide proceso FAQ based on tab
+          if (procesoFaq) {
+            if (tab.id === 'tab-proceso') {
+              procesoFaq.classList.remove('hidden');
+            } else {
+              procesoFaq.classList.add('hidden');
+              // Reset the fourth FAQ's state
+              const faq4Button = document.querySelector('[aria-controls="faq-4"]');
+              const faq4Content = document.getElementById('faq-4');
+              if (faq4Button && faq4Content) {
+                faq4Button.setAttribute("aria-expanded", "false");
+                faq4Content.classList.add("hidden");
+                faq4Button.classList.remove("bg-[#f8f7ff]");
+                const svg = faq4Button.querySelector("svg");
+                if (svg) svg.classList.remove("rotate-180");
+              }
+            }
+          }
         });
       });
     });

@@ -6,8 +6,6 @@
     style="margin-top: -100px;"
     renderer="svg"
     speed="1"
-    loop
-    autoplay
     mode="normal"
     direction="1"
     class="w-[200%] h-[200%] md:w-full md:h-full"
@@ -25,7 +23,7 @@
     autoplay
     ></lottie-player>
     </div>
-  <section class="md:hidden bg-[#147A31] px-4 py-8 rounded-3xl mx-4 mb-[-4rem] relative z-10" id="comofunciona">
+  <section class="lg:hidden bg-[#147A31] px-4 py-8 rounded-3xl mx-4 mb-[-4rem] relative z-10" id="comofunciona">
     <h2 class="text-white text-[28px] font-bold text-center mb-8">
       Conoce cómo funciona
     </h2>
@@ -131,7 +129,8 @@
 </div>
 
   <!-- Desktop Version -->
-  <section class="hidden md:block desktop-view relative" id="comofunciona-desktop">
+   <div class="lg:w-full">
+  <section class="hidden lg:block desktop-view relative" id="comofunciona-desktop">
     <div class="absolute left-1/2 transform -translate-x-1/2 -top-24 z-10">
       <lottie-player
       id="chicopapelito"
@@ -143,7 +142,7 @@
         ></lottie-player>
     </div>
     <div
-      class="contenedor flex items-center justify-center h-full w-full px-[300px] bg-[#e9f2e7] top-[100px]"
+      class="contenedor flex items-center justify-center h-full w-full px-[10%] xl:px-[200px] 2xl:px-[300px] bg-[#e9f2e7] top-[100px]"
     >
       <div
         class="bg-[#147A31] !-mt-10 text-[32px] text-white font-[700] px-[32px] w-full text-center h-[416px] rounded-[44px] flex items-center justify-center mb-10"
@@ -152,11 +151,11 @@
       </div>
       <div
         id="step1-desktop"
-        class="absolute card step-card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] top-[28.5rem] left-[25rem] visible z-1 transition-transform duration-700 translate-y-[30px]"
+        class="absolute card step-card bg-white shadow-lg px-[16px] lg:px-[24px] py-[24px] lg:py-[32px] w-[280px] xl:w-[320px] 2xl:w-[361px] h-[180px] xl:h-[200px] 2xl:h-[217px] rounded-[20px] top-[28.5rem] left-[15%] xl:left-[20%] 2xl:left-[25rem] visible z-1 transition-transform duration-700 translate-y-[30px]"
       >
-        <div class="flex flex-row gap-2 items-center justify-center mb-4">
+        <div class="flex flex-row gap-2 items-center justify-center mb-2 lg:mb-4">
           <h2
-            class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
+            class="leading-6 text-[#147A31] text-balance text-[18px] xl:text-[24px] font-[500]"
             data-trans="landing::feature_first_box__title"
           >
           Revisa el estado de tu caso
@@ -164,7 +163,7 @@
           <img
             src="img/Group 2229(2).png"
             alt="logo"
-            class="w-[80px] h-full"
+            class="w-[50px] xl:w-[80px] h-full"
             width="100"
             height="100"
             loading="lazy"
@@ -172,7 +171,7 @@
           />
         </div>
         <p
-          class="text-pretty text-[16px] text-[#606060]"
+          class="text-pretty text-[13px] xl:text-[16px] text-[#606060]"
           data-trans="landing::feature_first_box__description"
         >
         En caso existan multas te ayudamos y hasta te gestionamos un plan de pago.
@@ -180,11 +179,11 @@
       </div>
       <div
         id="step2-desktop"
-        class="absolute card step-card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] top-[28.5rem] right-[25rem] visible z-1 transition-transform duration-700 translate-y-[30px]"
+        class="absolute card step-card bg-white shadow-lg px-[16px] lg:px-[24px] py-[24px] lg:py-[32px] w-[280px] xl:w-[320px] 2xl:w-[361px] h-[180px] xl:h-[200px] 2xl:h-[217px] rounded-[20px] top-[28.5rem] right-[15%] xl:right-[20%] 2xl:right-[25rem] visible z-1 transition-transform duration-700 translate-y-[30px]"
       >
-        <div class="flex flex-row gap-2 items-center justify-center mb-4">
+        <div class="flex flex-row gap-2 items-center justify-center mb-2 lg:mb-4">
           <h2
-            class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
+            class="leading-6 text-[#147A31] text-balance text-[18px] xl:text-[24px] font-[500]"
             data-trans="landing::feature_second_box__title"
           >
           Recibe tu licencia o Permiso
@@ -192,7 +191,7 @@
           <img
             src="img/Group 2229(3).png"
             alt="logo"
-            class="w-[80px] h-full"
+            class="w-[50px] xl:w-[80px] h-full"
             width="100"
             height="100"
             loading="lazy"
@@ -200,18 +199,18 @@
           />
         </div>
         <p
-          class="text-pretty text-[16px] text-[#606060]"
+          class="text-pretty text-[13px] xl:text-[16px] text-[#606060]"
         >
         Una vez listo, radicamos tu caso y te hacemos llegar tu licencia o permiso por correo.
         </p>
       </div>
       <div
         id="step3-desktop"
-        class="absolute card step-card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] bottom-[33.5rem] left-[25rem] visible transition-transform duration-700 translate-y-[30px]"
+        class="absolute card step-card bg-white shadow-lg px-[16px] lg:px-[24px] py-[24px] lg:py-[32px] w-[280px] xl:w-[320px] 2xl:w-[361px] h-[180px] xl:h-[200px] 2xl:h-[217px] rounded-[20px] bottom-[33.5rem] left-[15%] xl:left-[20%] 2xl:left-[25rem] visible transition-transform duration-700 translate-y-[30px]"
       >
-        <div class="flex flex-row gap-2 items-center justify-center mb-4">
+        <div class="flex flex-row gap-2 items-center justify-center mb-2 lg:mb-4">
           <h2
-            class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
+            class="leading-6 text-[#147A31] text-balance text-[18px] xl:text-[24px] font-[500]"
             data-trans="landing::feature_third_box__title"
           >
           Selecciona el trámite
@@ -219,7 +218,7 @@
           <img
             src="img/Group 2229.png"
             alt="logo"
-            class="w-[80px] h-full"
+            class="w-[50px] xl:w-[80px] h-full"
             width="100"
             height="100"
             loading="lazy"
@@ -227,7 +226,7 @@
           />
         </div>
         <p
-          class="text-pretty text-[16px] text-[#606060]"
+          class="text-pretty text-[13px] xl:text-[16px] text-[#606060]"
           data-trans="landing::feature_third_box__description"
         >
         Ingresa tus datos y realiza el pago del trámite seleccionado
@@ -236,11 +235,11 @@
       </div>
       <div
         id="step4-desktop"
-        class="absolute card step-card bg-white shadow-lg px-[24px] py-[32px] w-[361px] h-[217px] rounded-[20px] bottom-[33.5rem] right-[25rem] visible transition-transform duration-700 translate-y-[30px]"
+        class="absolute card step-card bg-white shadow-lg px-[16px] lg:px-[24px] py-[24px] lg:py-[32px] w-[280px] xl:w-[320px] 2xl:w-[361px] h-[180px] xl:h-[200px] 2xl:h-[217px] rounded-[20px] bottom-[33.5rem] right-[15%] xl:right-[20%] 2xl:right-[25rem] visible transition-transform duration-700 translate-y-[30px]"
       >
-        <div class="flex flex-row gap-2 items-center justify-center mb-4">
+        <div class="flex flex-row gap-2 items-center justify-center mb-2 lg:mb-4">
           <h2
-            class="leading-6 text-[#147A31] text-balance text-[24px] font-[500]"
+            class="leading-6 text-[#147A31] text-balance text-[18px] xl:text-[24px] font-[500]"
             data-trans="landing::feature_fourth_box__title"
           >
           Completa tu Información
@@ -248,7 +247,7 @@
           <img
             src="img/Group 2229(1).png"
             alt="logo"
-            class="w-[80px] h-full"
+            class="w-[50px] xl:w-[80px] h-full"
             width="100"
             height="100"
             loading="lazy"
@@ -256,7 +255,7 @@
           />
         </div>
         <p
-          class="text-pretty text-[16px] text-[#606060]"
+          class="text-pretty text-[13px] xl:text-[16px] text-[#606060]"
           data-trans="landing::feature_fourth_box__description"
         >
         Llena la solicitud y sube tus fotos y documentos. Analizaremos tu cuenta para validarla.
@@ -264,25 +263,34 @@
       </div>
     </div>
   </section>
+</div>
 
   <!-- Wavy shape -->
   <div class="relative">
   <lottie-player
-      class="rotate-180 md:hidden"
-  id="car2"
+      class="rotate-180 lg:hidden"
+      id="car2"
       src="/json/chicacarrito.json"
       background="transparent"
       style="width: full; height: full; margin-top: -2rem;"
+    ></lottie-player>
+
+    <lottie-player
+      class="rotate-180 hidden lg:block 2xl:hidden"
+      id="car2-tablet"
+      src="/json/chicacarrito.json"
+      background="transparent"
+      style="width: full; height: full; margin-top: -120px;"
       autoplay
     ></lottie-player>
 
     <lottie-player
-      class="rotate-180 hidden md:block"
+      class="rotate-180 hidden 2xl:block"
       id="car2-desktop"
-    src="/json/chicacarrito.json"
-    background="transparent"
-    style="width: full; height: full; margin-top: -200px;"
-    autoplay
+      src="/json/chicacarrito.json"
+      background="transparent"
+      style="width: full; height: full; margin-top: -200px;"
+      autoplay
     ></lottie-player>
 </div>
 </div>
@@ -328,6 +336,48 @@
             visibility: [0, 1.0],
             type: 'seek',
             frames: [0, 400],
+          },
+        ],
+      });
+    }
+
+    if (window.LottieInteractivity) {
+      LottieInteractivity.create({
+        mode: 'scroll',
+        player: '#car2',
+        actions: [
+          {
+            visibility: [0, 1.0],
+            type: 'seek',
+            frames: [45, 45],
+          },
+        ],
+      });
+    }
+
+    if (window.LottieInteractivity) {
+      LottieInteractivity.create({
+        mode: 'scroll',
+        player: '#car2-tablet',
+        actions: [
+          {
+            visibility: [0, 1.0],
+            type: 'seek',
+            frames: [45, 45],
+          },
+        ],
+      });
+    }
+
+    if (window.LottieInteractivity) {
+      LottieInteractivity.create({
+        mode: 'scroll',
+        player: '#car2-desktop',
+        actions: [
+          {
+            visibility: [0, 1.0],
+            type: 'seek',
+            frames: [45, 45],
           },
         ],
       });
