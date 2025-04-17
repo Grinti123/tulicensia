@@ -1,3 +1,9 @@
+---
+import Card from '../components/ui/Card.astro';
+import RadioGroup from '../components/forms/RadioGroup.astro';
+import LottieAnimation from '../components/ui/LottieAnimation.astro';
+---
+
 <section class="py-8 lg:py-16 bg-white lg:-mt-12 xl:-mt-70">
   <div class="container mx-auto px-4 max-w-5xl">
     <div class="text-center mb-8 lg:mb-12">
@@ -9,19 +15,13 @@
     <div class="flex flex-row justify-center gap-4 lg:gap-32 mb-6 lg:mb-16" id="service-buttons">
       <!-- Trámites de personas option -->
       <div class="flex flex-col items-center relative">
-        <!-- Person animation -->
-        <div class="w-40 h-40 lg:w-56 lg:h-56 mb-3 lg:mb-8 flex items-center justify-center">
-          <dotlottie-player
-            src="/json/chicolentes.json"
-            background="transparent"
-            speed="1"
-            style="width: 100%; height: 100%;"
-            loop
-            autoplay
-          ></dotlottie-player>
-        </div>
+        <LottieAnimation
+          src="/json/chicolentes.json"
+          width="100%"
+          height="100%"
+          class="w-40 h-40 lg:w-56 lg:h-56 mb-3 lg:mb-8"
+        />
 
-        <!-- Button -->
         <button
           id="btn-personas"
           class="py-2 lg:py-3 px-3 lg:px-8 border-2 border-green-700 text-green-700 text-xs lg:text-base font-medium rounded-full hover:bg-green-50 transition-colors whitespace-nowrap"
@@ -32,19 +32,13 @@
 
       <!-- Trámites de vehículos option -->
       <div class="flex flex-col items-center relative">
-        <!-- Car animation -->
-        <div class="w-40 h-40 lg:w-56 lg:h-56 mb-3 lg:mb-8 flex items-center justify-center">
-          <dotlottie-player
-            src="/json/carrito.json"
-            background="transparent"
-            speed="1"
-            style="width: 100%; height: 100%;"
-            loop
-            autoplay
-          ></dotlottie-player>
-        </div>
+        <LottieAnimation
+          src="/json/carrito.json"
+          width="100%"
+          height="100%"
+          class="w-40 h-40 lg:w-56 lg:h-56 mb-3 lg:mb-8"
+        />
 
-        <!-- Button -->
         <button
           id="btn-vehiculos"
           class="py-2 lg:py-3 px-3 lg:px-8 border-2 border-green-700 text-green-700 text-xs lg:text-base font-medium rounded-full hover:bg-green-50 transition-colors whitespace-nowrap"
@@ -59,48 +53,23 @@
       <!-- Trámites de personas details -->
       <div id="personas-details" class="hidden opacity-0 transition-opacity duration-500 ease-in-out">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 items-center">
-          <!-- Image and Text Column -->
-          <div class="bg-[#f1f1ff] rounded-2xl p-4 lg:p-6 flex flex-col">
-            <div class="w-40 h-40 lg:w-48 lg:h-48 mb-3 lg:mb-4 mx-auto">
-              <dotlottie-player
-                src="/json/chicolentes.json"
-                background="transparent"
-                speed="1"
-                style="width: 100%; height: 100%;"
-                loop
-                autoplay
-              ></dotlottie-player>
-            </div>
+          <Card
+            title="Trámites de personas"
+            description="Gestionamos tus trámites desde la solicitud hasta la entrega de placas."
+            imageUrl="/json/chicolentes.json"
+            ctaLink="/iniciar-tramite"
+          />
 
-            <h3 class="text-lg lg:text-xl font-semibold text-gray-800 mt-2 lg:mt-4 mb-2 lg:mb-3">Trámites de personas</h3>
-            <p class="text-gray-600 text-sm lg:text-base mb-4 lg:mb-6">
-              Gestionamos tus trámites desde la solicitud hasta la entrega de placas.
-            </p>
-
-            <a href="/iniciar-tramite" class="inline-block bg-[#147A31] text-white py-2 lg:py-3 px-6 lg:px-8 rounded-full text-sm lg:text-base font-medium hover:bg-indigo-700 transition-colors text-center w-fit">
-              ¡Iniciar ahora!
-            </a>
-          </div>
-
-          <!-- Form Options Column -->
           <div class="bg-[#f8f8ff] rounded-3xl p-4 lg:p-8 relative overflow-hidden">
             <div class="bg-white rounded-2xl p-4 lg:p-6 shadow-sm">
-              <div class="space-y-4 lg:space-y-6">
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input type="radio" name="tramite-persona" class="form-radio h-4 w-4 lg:h-5 lg:w-5 text-indigo-600" value="renovacion">
-                  <span class="text-gray-700 text-sm lg:text-base">Renovación de Licencia</span>
-                </label>
-
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input type="radio" name="tramite-persona" class="form-radio h-4 w-4 lg:h-5 lg:w-5 text-indigo-600" value="duplicado">
-                  <span class="text-gray-700 text-sm lg:text-base">Duplicado de Licencia</span>
-                </label>
-
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input type="radio" name="tramite-persona" class="form-radio h-4 w-4 lg:h-5 lg:w-5 text-indigo-600" value="reciprocidad">
-                  <span class="text-gray-700 text-sm lg:text-base">Licencia de Reciprocidad</span>
-                </label>
-              </div>
+              <RadioGroup
+                name="tramite-persona"
+                options={[
+                  { value: "renovacion", label: "Renovación de Licencia" },
+                  { value: "duplicado", label: "Duplicado de Licencia" },
+                  { value: "reciprocidad", label: "Licencia de Reciprocidad" },
+                ]}
+              />
             </div>
           </div>
         </div>
@@ -109,58 +78,25 @@
       <!-- Trámites de vehículos details -->
       <div id="vehiculos-details" class="hidden opacity-0 transition-opacity duration-500 ease-in-out">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 items-center">
-          <!-- Image and Text Column -->
-          <div class="bg-[#f1f1ff] rounded-2xl p-4 lg:p-6 flex flex-col">
-            <div class="w-40 h-40 lg:w-48 lg:h-48 mb-3 lg:mb-4 mx-auto">
-              <dotlottie-player
-                src="/json/carrito.json"
-                background="transparent"
-                speed="1"
-                style="width: 100%; height: 100%;"
-                loop
-                autoplay
-              ></dotlottie-player>
-            </div>
+          <Card
+            title="Trámites de vehículos"
+            description="Gestionamos tus trámites vehiculares con rapidez y eficiencia."
+            imageUrl="/json/carrito.json"
+            ctaLink="/iniciar-tramite-vehiculo"
+          />
 
-            <h3 class="text-lg lg:text-xl font-semibold text-gray-800 mt-2 lg:mt-4 mb-2 lg:mb-3">Trámites de vehículos</h3>
-            <p class="text-gray-600 text-sm lg:text-base mb-4 lg:mb-6">
-              Gestionamos tus trámites vehiculares con rapidez y eficiencia.
-            </p>
-
-            <a href="/iniciar-tramite-vehiculo" class="inline-block bg-[#147A31] text-white py-2 lg:py-3 px-6 lg:px-8 rounded-full text-sm lg:text-base font-medium hover:bg-indigo-700 transition-colors text-center w-fit">
-              ¡Iniciar ahora!
-            </a>
-          </div>
-
-          <!-- Form Options Column -->
           <div class="bg-[#f8f8ff] rounded-3xl p-4 lg:p-8 relative overflow-hidden">
             <div class="bg-white rounded-2xl p-4 lg:p-6 shadow-sm">
-              <div class="space-y-4 lg:space-y-6">
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input type="radio" name="tramite-vehiculo" class="form-radio h-4 w-4 lg:h-5 lg:w-5 text-indigo-600" value="traspaso">
-                  <span class="text-gray-700 text-sm lg:text-base">Traspaso de Vehículos</span>
-                </label>
-
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input type="radio" name="tramite-vehiculo" class="form-radio h-4 w-4 lg:h-5 lg:w-5 text-indigo-600" value="renovacion-marbete">
-                  <span class="text-gray-700 text-sm lg:text-base">Gestión de Título</span>
-                </label>
-
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input type="radio" name="tramite-vehiculo" class="form-radio h-4 w-4 lg:h-5 lg:w-5 text-indigo-600" value="multas">
-                  <span class="text-gray-700 text-sm lg:text-base">Tablillas Especiales</span>
-                </label>
-
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input type="radio" name="tramite-vehiculo" class="form-radio h-4 w-4 lg:h-5 lg:w-5 text-indigo-600" value="multas">
-                  <span class="text-gray-700 text-sm lg:text-base">Gravámenes</span>
-                </label>
-
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input type="radio" name="tramite-vehiculo" class="form-radio h-4 w-4 lg:h-5 lg:w-5 text-indigo-600" value="multas">
-                  <span class="text-gray-700 text-sm lg:text-base">Record Choferil</span>
-                </label>
-              </div>
+              <RadioGroup
+                name="tramite-vehiculo"
+                options={[
+                  { value: "traspaso", label: "Traspaso de Vehículos" },
+                  { value: "renovacion-marbete", label: "Gestión de Título" },
+                  { value: "multas", label: "Tablillas Especiales" },
+                  { value: "multas", label: "Gravámenes" },
+                  { value: "multas", label: "Record Choferil" },
+                ]}
+              />
             </div>
           </div>
         </div>
@@ -170,97 +106,25 @@
 </section>
 
 <script is:inline>
+  import { fadeIn, fadeOut } from '../utils/animations';
+
   document.addEventListener('DOMContentLoaded', function() {
-    // Get the buttons and detail sections
     const btnPersonas = document.getElementById('btn-personas');
     const btnVehiculos = document.getElementById('btn-vehiculos');
     const personasDetails = document.getElementById('personas-details');
     const vehiculosDetails = document.getElementById('vehiculos-details');
 
-    // Initially no details are shown and buttons are in default state
-
-    // Add click event to personas button
-    btnPersonas.addEventListener('click', function() {
-      // Check if already active
-      if (btnPersonas.classList.contains('bg-green-700')) {
-        return;
+    const toggleService = async (showDetails: HTMLElement, hideDetails: HTMLElement) => {
+      if (!hideDetails.classList.contains('hidden')) {
+        await fadeOut(hideDetails);
+        hideDetails.classList.add('hidden');
       }
 
-      // Fade out the currently shown section if any
-      if (!personasDetails.classList.contains('hidden')) {
-        personasDetails.classList.add('opacity-0');
-        setTimeout(() => {
-          personasDetails.classList.add('hidden');
-        }, 500);
-      }
+      showDetails.classList.remove('hidden');
+      fadeIn(showDetails);
+    };
 
-      if (!vehiculosDetails.classList.contains('hidden')) {
-        vehiculosDetails.classList.add('opacity-0');
-        setTimeout(() => {
-          vehiculosDetails.classList.add('hidden');
-
-          // Show personas details with fade-in
-          personasDetails.classList.remove('hidden');
-          setTimeout(() => {
-            personasDetails.classList.remove('opacity-0');
-          }, 10);
-        }, 500);
-      } else {
-        // Show personas details with fade-in
-        personasDetails.classList.remove('hidden');
-        setTimeout(() => {
-          personasDetails.classList.remove('opacity-0');
-        }, 10);
-      }
-
-      // Update button styles
-      btnPersonas.classList.remove('border-green-700', 'text-green-700');
-      btnPersonas.classList.add('bg-green-700', 'text-white');
-
-      btnVehiculos.classList.add('border-green-700', 'text-green-700');
-      btnVehiculos.classList.remove('bg-green-700', 'text-white');
-    });
-
-    // Add click event to vehiculos button
-    btnVehiculos.addEventListener('click', function() {
-      // Check if already active
-      if (btnVehiculos.classList.contains('bg-green-700')) {
-        return;
-      }
-
-      // Fade out the currently shown section if any
-      if (!vehiculosDetails.classList.contains('hidden')) {
-        vehiculosDetails.classList.add('opacity-0');
-        setTimeout(() => {
-          vehiculosDetails.classList.add('hidden');
-        }, 500);
-      }
-
-      if (!personasDetails.classList.contains('hidden')) {
-        personasDetails.classList.add('opacity-0');
-        setTimeout(() => {
-          personasDetails.classList.add('hidden');
-
-          // Show vehiculos details with fade-in
-          vehiculosDetails.classList.remove('hidden');
-          setTimeout(() => {
-            vehiculosDetails.classList.remove('opacity-0');
-          }, 10);
-        }, 500);
-      } else {
-        // Show vehiculos details with fade-in
-        vehiculosDetails.classList.remove('hidden');
-        setTimeout(() => {
-          vehiculosDetails.classList.remove('opacity-0');
-        }, 10);
-      }
-
-      // Update button styles
-      btnVehiculos.classList.remove('border-green-700', 'text-green-700');
-      btnVehiculos.classList.add('bg-green-700', 'text-white');
-
-      btnPersonas.classList.add('border-green-700', 'text-green-700');
-      btnPersonas.classList.remove('bg-green-700', 'text-white');
-    });
+    btnPersonas.addEventListener('click', () => toggleService(personasDetails, vehiculosDetails));
+    btnVehiculos.addEventListener('click', () => toggleService(vehiculosDetails, personasDetails));
   });
 </script>

@@ -1,0 +1,26 @@
+---
+interface Props {
+  name: string;
+  options: Array<{
+    value: string;
+    label: string;
+  }>;
+  class?: string;
+}
+
+const { name, options, class: className } = Astro.props;
+---
+
+<div class:list={["space-y-4 lg:space-y-6", className]}>
+  {options.map((option) => (
+    <label class="flex items-center space-x-3 cursor-pointer">
+      <input
+        type="radio"
+        name={name}
+        class="form-radio h-4 w-4 lg:h-5 lg:w-5 text-indigo-600"
+        value={option.value}
+      />
+      <span class="text-gray-700 text-sm lg:text-base">{option.label}</span>
+    </label>
+  ))}
+</div>
